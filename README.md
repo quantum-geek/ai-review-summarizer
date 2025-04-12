@@ -19,3 +19,15 @@ A smart web app that uses AI to summarize customer reviews from e-commerce or se
 - [ ] Sentiment analyzer
 - [ ] Summarizer
 - [ ] Streamlit UI
+
+
+ai-review-summarizer/
+├── data/              # (Raw + cleaned review data)
+├── notebooks/         # (Exploratory Jupyter notebooks)
+├── src/               # (Main code)
+│   ├── scraper.py     # For scraping or reading reviews
+│   ├── analyzer.py    # Sentiment and summary functions
+│   └── app.py         # Streamlit app
+├── requirements.txt   # Python libraries
+├── README.md          # Project overview
+└── .gitignore
