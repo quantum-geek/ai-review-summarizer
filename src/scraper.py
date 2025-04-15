@@ -43,7 +43,7 @@ def get_reviews_from_amazon(url, max_reviews=10):
                 break
 
     except Exception as e:
-        print(f"❌ Error while scraping reviews: {e}")
+        print(f"Error while scraping reviews: {e}")
 
     finally:
         driver.quit()
@@ -54,12 +54,12 @@ def save_reviews_to_json(reviews, filename="data/raw_reviews.json"):
     os.makedirs("data", exist_ok=True)
     with open(filename, "w", encoding="utf-8") as f:
         json.dump(reviews, f, indent=4, ensure_ascii=False)
-    print(f"✅ Saved {len(reviews)} reviews to {filename}")
+    print(f"Saved {len(reviews)} reviews to {filename}")
 
 
 if __name__ == "__main__":
     product_url = "https://www.amazon.com/product-reviews/B07FZ8S74R/"  # Replace with your URL
     reviews = get_reviews_from_amazon(product_url)
     save_reviews_to_json(reviews)
-    print("📦 Scraping completed.")
-    print(f"📝 Extracted {len(reviews)} reviews.")
+    print("Scraping completed.")
+    print(f"Extracted {len(reviews)} reviews.")
